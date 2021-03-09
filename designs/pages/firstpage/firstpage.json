@@ -1,0 +1,14 @@
+{
+    "appPageId": "8598198e-6b03-3d46-bb57-5cd405c77961",
+    "appPageName": "firstpage",
+    "componentName": "firstpageComponent",
+    "selectorName": "bh-firstpage",
+    "htmlFileName": "firstpage.template.html",
+    "tsFileName": "firstpage.component.ts",
+    "createDate": "2021-03-09T08:53:08.953Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

@@ -1,0 +1,14 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <mat-icon>home</mat-icon><button mat-raised-button (click)="onclick()"> Button</button>
+</div>
+<mat-card>
+  <mat-card-content>
+    <div fxLayout="row wrap" style="background-color:yellow;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div>
+        Incident Details</div>
+      <mat-icon style="padding-left:80%;" (click)="onclick()">add_circle</mat-icon>
+      <mat-icon style="padding-left:20px;">home</mat-icon>
+      <mat-icon style="padding-left:20px;">logout</mat-icon>
+    </div>
+  </mat-card-content>
+</mat-card>

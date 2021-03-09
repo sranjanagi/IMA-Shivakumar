@@ -1,9 +1,18 @@
 {
     "routes": [
         {
+            "path": "first",
+            "component": "firstpageComponent"
+        },
+        {
+            "path": "table",
+            "component": "tableviewComponent"
+        },
+        {
             "path": "''",
-            "redirectTo": "",
-            "pathMatch": "full"
+            "redirectTo": "first",
+            "pathMatch": "full",
+            "default": true
         },
         {
             "path": "**",

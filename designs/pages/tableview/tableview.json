@@ -1,0 +1,14 @@
+{
+    "appPageId": "6ec95d8c-eb8a-3211-25f0-fa251679fb5d",
+    "appPageName": "tableview",
+    "componentName": "tableviewComponent",
+    "selectorName": "bh-tableview",
+    "htmlFileName": "tableview.template.html",
+    "tsFileName": "tableview.component.ts",
+    "createDate": "2021-03-09T11:06:50.695Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}
