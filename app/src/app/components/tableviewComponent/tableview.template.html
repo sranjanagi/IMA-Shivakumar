@@ -1,28 +1,32 @@
 <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <bh-firstpage></bh-firstpage>
   <div fxLayout="column">
-    <table mat-table [dataSource]="tableData" class="table-width-fix">
-
+    <table mat-table [dataSource]="tableData" matSort class="table-width-fix">
+      <tr mat-header-row *matHeaderRowDef="[&apos;subject&apos;,&apos;description&apos;,&apos;priority&apos;,&apos;checkdate&apos;]"></tr>
       <tr mat-row *matRowDef="let row; columns: [&apos;subject&apos;,&apos;description&apos;,&apos;priority&apos;,&apos;checkdate&apos;];"></tr>
 
       <ng-container matColumnDef="subject">
-        <th mat-header-cell *matHeaderCellDef></th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>subject</th>
         <td mat-cell *matCellDef="let table; let i = index;">{{table.subject}}</td>
       </ng-container>
 
       <ng-container matColumnDef="description">
-        <th mat-header-cell *matHeaderCellDef></th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>description</th>
         <td mat-cell *matCellDef="let table; let i = index;">{{table.description}}</td>
       </ng-container>
 
       <ng-container matColumnDef="priority">
-        <th mat-header-cell *matHeaderCellDef></th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>priority</th>
         <td mat-cell *matCellDef="let table; let i = index;">{{table.priority}}</td>
       </ng-container>
 
       <ng-container matColumnDef="checkdate">
-        <th mat-header-cell *matHeaderCellDef></th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>checkdate</th>
         <td mat-cell *matCellDef="let table; let i = index;">{{table.checkdate}}</td>
       </ng-container>
     </table>
+    <mat-paginator [length]="100" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]" (page)="paginatioin()">
+    </mat-paginator>
+
   </div>
 </div>

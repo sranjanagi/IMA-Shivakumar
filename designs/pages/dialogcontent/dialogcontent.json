@@ -1,0 +1,14 @@
+{
+    "appPageId": "c287f509-cc17-d5d8-07d0-82994d77bd95",
+    "appPageName": "dialogcontent",
+    "componentName": "dialogcontentComponent",
+    "selectorName": "bh-dialogcontent",
+    "htmlFileName": "dialogcontent.template.html",
+    "tsFileName": "dialogcontent.component.ts",
+    "createDate": "2021-03-10T05:16:58.158Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

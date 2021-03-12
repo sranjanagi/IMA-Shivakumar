@@ -64,6 +64,31 @@
                 "_attrDef": "p"
             }
         ],
+        "cda31414-dacf-727e-4139-76edec86fd05": {
+            "paletteKey": "NEUTRINOS_VIEW_firstpage",
+            "parentEditorKey": "ae9719ec-2e5f-3b74-dca4-bbaf9e3ebf00",
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "firstpage",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "dav",
+                    "_attrDef": "p"
+                }
+            ]
+        },
         "a506390d-bc0e-8592-39d9-cc8d7a620e77": {
             "paletteKey": "ng-table",
             "parentEditorKey": "ae9719ec-2e5f-3b74-dca4-bbaf9e3ebf00",
@@ -102,7 +127,7 @@
                 },
                 {
                     "_key": "header",
-                    "_value": false,
+                    "_value": true,
                     "_type": "a",
                     "_attrDef": "p",
                     "_visibility": true
@@ -115,13 +140,13 @@
                 "designerReference": [
                     {
                         "_key": "Header Label",
-                        "_value": "",
+                        "_value": "subject",
                         "_type": "a",
                         "_attrDef": "p"
                     },
                     {
                         "_key": "matSortHeaderColumn",
-                        "_value": "",
+                        "_value": "mat-sort-header",
                         "_type": "a",
                         "_attrDef": "p"
                     },
@@ -160,13 +185,13 @@
                 "designerReference": [
                     {
                         "_key": "Header Label",
-                        "_value": "",
+                        "_value": "description",
                         "_type": "a",
                         "_attrDef": "p"
                     },
                     {
                         "_key": "matSortHeaderColumn",
-                        "_value": "",
+                        "_value": "mat-sort-header",
                         "_type": "a",
                         "_attrDef": "p"
                     },
@@ -205,13 +230,13 @@
                 "designerReference": [
                     {
                         "_key": "Header Label",
-                        "_value": "",
+                        "_value": "priority",
                         "_type": "a",
                         "_attrDef": "p"
                     },
                     {
                         "_key": "matSortHeaderColumn",
-                        "_value": "",
+                        "_value": "mat-sort-header",
                         "_type": "a",
                         "_attrDef": "p"
                     },
@@ -250,13 +275,13 @@
                 "designerReference": [
                     {
                         "_key": "Header Label",
-                        "_value": "",
+                        "_value": "checkdate",
                         "_type": "a",
                         "_attrDef": "p"
                     },
                     {
                         "_key": "matSortHeaderColumn",
-                        "_value": "",
+                        "_value": "mat-sort-header",
                         "_type": "a",
                         "_attrDef": "p"
                     },
@@ -284,6 +309,50 @@
                         "_key": "columnclass",
                         "_value": "",
                         "_type": "dav",
+                        "_attrDef": "p"
+                    }
+                ]
+            },
+            "959d1d08-6926-1650-8f74-99b0617f48ce": {
+                "paletteKey": "ng-table-paginator",
+                "parentEditorKey": "a506390d-bc0e-8592-39d9-cc8d7a620e77",
+                "isAdvancedComponent": true,
+                "advancedSiblingType": "after",
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "[length]",
+                        "_value": "100",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "[pageSize]",
+                        "_value": "5",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "[pageSizeOptions]",
+                        "_value": "[5, 10, 25, 100]",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "(page)",
+                        "_value": "paginatioin()",
+                        "_type": "kv",
                         "_attrDef": "p"
                     }
                 ]

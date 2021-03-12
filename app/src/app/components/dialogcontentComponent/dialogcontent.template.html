@@ -1,0 +1,26 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div>
+    Add Incident</div>
+  <form>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput placeholder="Enter Subject" [required]="false">
+
+      </mat-form-field>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput placeholder="Input" [required]="false">
+
+      </mat-form-field>
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput placeholder="Input" [required]="false">
+
+      </mat-form-field>
+      <mat-form-field [appearance]="&apos;legacy&apos;">
+        <input matInput placeholder="Date Picker" [matDatepicker]="picker" [required]="false" [disabled]="false">
+        <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
+        <mat-datepicker #picker [disabled]="false"></mat-datepicker>
+
+      </mat-form-field><button mat-raised-button>Submit</button>
+    </div>
+  </form>
+</div>

@@ -1,1 +1,9 @@
-{"classes":[]}
+{
+    "classes": [
+        "mat-sort-header-sorted",
+        "mat-flat-button",
+        "mat-raised-button",
+        "mat-fab",
+        "mat-mini-fab"
+    ]
+}

@@ -15,6 +15,8 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-dialogcontentComponent
+import { dialogcontentComponent } from '../components/dialogcontentComponent/dialogcontent.component';
 //CORE_REFERENCE_IMPORT-tableviewComponent
 import { tableviewComponent } from '../components/tableviewComponent/tableview.component';
 //CORE_REFERENCE_IMPORT-dialogcontentexampledialogComponent
@@ -48,6 +50,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dialogcontentComponent
+dialogcontentComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-tableviewComponent
 tableviewComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dialogcontentexampledialogComponent
@@ -80,5 +84,5 @@ export const appProviders = [
 */
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
-export const appRoutes = [{path: 'first', component: firstpageComponent},{path: 'table', component: tableviewComponent},{path: '', redirectTo: 'first', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+export const appRoutes = [{path: 'first', component: firstpageComponent},{path: 'table', component: tableviewComponent},{path: 'sec', component: dialogcontentComponent},{path: '', redirectTo: 'first', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

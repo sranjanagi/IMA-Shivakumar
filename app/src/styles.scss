@@ -2,3 +2,16 @@
 
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "nDefaults.scss";
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab {
+    color: white;
+    
+    
+    }

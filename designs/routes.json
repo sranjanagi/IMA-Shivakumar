@@ -9,6 +9,10 @@
             "component": "tableviewComponent"
         },
         {
+            "path": "sec",
+            "component": "dialogcontentComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "first",
             "pathMatch": "full",
