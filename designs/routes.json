@@ -13,6 +13,10 @@
             "component": "dialogcontentComponent"
         },
         {
+            "path": "openonsub",
+            "component": "dialogforupdateComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "first",
             "pathMatch": "full",

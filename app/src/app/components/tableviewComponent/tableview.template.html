@@ -1,28 +1,45 @@
 <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
   <bh-firstpage></bh-firstpage>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"></div>
   <div fxLayout="column">
     <table mat-table [dataSource]="tableData" matSort class="table-width-fix">
-      <tr mat-header-row *matHeaderRowDef="[&apos;subject&apos;,&apos;description&apos;,&apos;priority&apos;,&apos;checkdate&apos;]"></tr>
-      <tr mat-row *matRowDef="let row; columns: [&apos;subject&apos;,&apos;description&apos;,&apos;priority&apos;,&apos;checkdate&apos;];"></tr>
+      <tr mat-header-row *matHeaderRowDef="[&apos;_id&apos;,&apos;subject&apos;,&apos;description&apos;,&apos;priority&apos;,&apos;date&apos;,&apos;c48a8115-3b06-e0f9-4343-35f6a09bc224&apos;]"></tr>
+      <tr mat-row *matRowDef="let row; columns: [&apos;_id&apos;,&apos;subject&apos;,&apos;description&apos;,&apos;priority&apos;,&apos;date&apos;,&apos;c48a8115-3b06-e0f9-4343-35f6a09bc224&apos;];"></tr>
+
+      <ng-container matColumnDef="_id">
+        <th mat-header-cell *matHeaderCellDef>Incident Id</th>
+        <td mat-cell *matCellDef="let table; let i = index;">{{table._id}}</td>
+      </ng-container>
 
       <ng-container matColumnDef="subject">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>subject</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Incident subject</th>
         <td mat-cell *matCellDef="let table; let i = index;">{{table.subject}}</td>
       </ng-container>
 
       <ng-container matColumnDef="description">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>description</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Incident Description</th>
         <td mat-cell *matCellDef="let table; let i = index;">{{table.description}}</td>
       </ng-container>
 
       <ng-container matColumnDef="priority">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>priority</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Incident priority</th>
         <td mat-cell *matCellDef="let table; let i = index;">{{table.priority}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="checkdate">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>checkdate</th>
-        <td mat-cell *matCellDef="let table; let i = index;">{{table.checkdate}}</td>
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Incident Date</th>
+        <td mat-cell *matCellDef="let table; let i = index;">{{table.date}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="c48a8115-3b06-e0f9-4343-35f6a09bc224">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let table; let i = index;">
+          <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-mini-fab (click)="callupdate(table)">
+              <mat-icon>edit</mat-icon>
+            </button><button mat-mini-fab (click)="calldelete(table._id)">
+              <mat-icon>delete</mat-icon>
+            </button></div>
+        </td>
       </ng-container>
     </table>
     <mat-paginator [length]="100" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]" (page)="paginatioin()">

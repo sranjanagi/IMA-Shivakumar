@@ -1,0 +1,34 @@
+{
+    "a9feab68-9320-ab18-2c3b-98bdfa6a81fd": {
+        "dataModelId": "a9feab68-9320-ab18-2c3b-98bdfa6a81fd",
+        "name": "datamodelsent",
+        "description": "sent from ui",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "subject",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "description",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "priority",
+                "fieldType": 1,
+                "isArray": false,
+                "type": "number"
+            },
+            {
+                "name": "date",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
+    }
+}

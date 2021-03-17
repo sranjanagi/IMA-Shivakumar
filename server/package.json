@@ -61,6 +61,7 @@
         "neutrinos-mongodb-session-store": "0.0.1",
         "nodemailer": "6.4.17",
         "openid-client": "3.4.0",
+        "pg": "^8.5.1",
         "poplib": "0.1.7",
         "request": "2.88.0",
         "strong-soap": "1.22.1",
@@ -80,7 +81,7 @@
         "start-prod": "cross-env NEUTRINOS_APP_ENV=prod npm run startserver",
         "node-prod": "cross-env NEUTRINOS_APP_ENV=prod node ./build/index.js",
         "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
-        "pm2": "tsc && pm2 start processes.json",
+        "pm2": "tsc && pm2 start ecosystem.config.js",
         "grunt": "node node_modules/grunt/bin/grunt"
     }
 }

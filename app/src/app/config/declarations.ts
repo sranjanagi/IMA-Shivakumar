@@ -15,6 +15,10 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-shoppingComponent
+import { shoppingComponent } from '../components/shoppingComponent/shopping.component';
+//CORE_REFERENCE_IMPORT-dialogforupdateComponent
+import { dialogforupdateComponent } from '../components/dialogforupdateComponent/dialogforupdate.component';
 //CORE_REFERENCE_IMPORT-dialogcontentComponent
 import { dialogcontentComponent } from '../components/dialogcontentComponent/dialogcontent.component';
 //CORE_REFERENCE_IMPORT-tableviewComponent
@@ -50,6 +54,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-shoppingComponent
+shoppingComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dialogforupdateComponent
+dialogforupdateComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dialogcontentComponent
 dialogcontentComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-tableviewComponent
@@ -84,5 +92,5 @@ export const appProviders = [
 */
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
-export const appRoutes = [{path: 'first', component: firstpageComponent},{path: 'table', component: tableviewComponent},{path: 'sec', component: dialogcontentComponent},{path: '', redirectTo: 'first', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+export const appRoutes = [{path: 'first', component: firstpageComponent},{path: 'table', component: tableviewComponent},{path: 'sec', component: dialogcontentComponent},{path: 'openonsub', component: dialogforupdateComponent},{path: '', redirectTo: 'first', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

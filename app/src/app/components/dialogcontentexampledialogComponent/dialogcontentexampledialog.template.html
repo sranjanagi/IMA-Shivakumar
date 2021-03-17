@@ -22,10 +22,10 @@
           <mat-error align="start" *ngIf="sampleform.controls.priority.errors?.pattern">Please enter the numeric values.</mat-error>
         </mat-form-field>
         <mat-form-field [appearance]="&apos;legacy&apos;">
-          <input matInput placeholder="Choose incident date" [matDatepicker]="picker" formControlName="checkdate" (dateChange)="change($event)" [min]="mindate" [required]="false" [disabled]="false">
+          <input matInput placeholder="Choose incident date" [matDatepicker]="picker" formControlName="date" (dateChange)="change($event)" [min]="mindate" [required]="false" [disabled]="false">
           <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
           <mat-datepicker #picker [disabled]="false"></mat-datepicker>
-          <mat-error align="start" *ngIf="sampleform.controls.checkdate.errors?.required">Please enter the date</mat-error>
+          <mat-error align="start" *ngIf="sampleform.controls.date.errors?.required">Please enter the date</mat-error>
         </mat-form-field>
       </div><button mat-raised-button style="width:100%;background-color: #6048ce;" routerLink="table" (click)="onclick()">Submit</button>
     </form>

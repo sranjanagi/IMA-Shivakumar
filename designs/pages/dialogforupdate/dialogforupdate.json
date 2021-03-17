@@ -1,0 +1,14 @@
+{
+    "appPageId": "7e06bf98-83bc-b35d-cbcc-537d097f1687",
+    "appPageName": "dialogforupdate",
+    "componentName": "dialogforupdateComponent",
+    "selectorName": "bh-dialogforupdate",
+    "htmlFileName": "dialogforupdate.template.html",
+    "tsFileName": "dialogforupdate.component.ts",
+    "createDate": "2021-03-15T08:45:10.495Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

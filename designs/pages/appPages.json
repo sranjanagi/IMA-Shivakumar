@@ -18,5 +18,15 @@
         "appPageName": "dialogcontent",
         "componentName": "dialogcontentComponent",
         "createDate": "2021-03-10T05:16:58.158Z"
+    },
+    "7e06bf98-83bc-b35d-cbcc-537d097f1687": {
+        "appPageName": "dialogforupdate",
+        "componentName": "dialogforupdateComponent",
+        "createDate": "2021-03-15T08:45:10.495Z"
+    },
+    "134dd6bc-71c1-3978-86c9-cc7cc10ed8b8": {
+        "appPageName": "shopping",
+        "componentName": "shoppingComponent",
+        "createDate": "2021-03-17T05:40:26.499Z"
     }
 }

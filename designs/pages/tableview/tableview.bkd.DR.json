@@ -89,6 +89,73 @@
                 }
             ]
         },
+        "e8fe5475-d18d-1f1d-c3a0-daf4858e4424": {
+            "paletteKey": "FlexLayoutCol",
+            "parentEditorKey": "ae9719ec-2e5f-3b74-dca4-bbaf9e3ebf00",
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "Column",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxFlex",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxLayoutGap",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "wrap",
+                    "_value": "wrap",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "layoutAlign",
+                    "_value": "start",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "pLayoutAlign",
+                    "_value": "stretch",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[fxShow]",
+                    "_value": "true",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[fxHide]",
+                    "_value": "false",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                }
+            ]
+        },
         "a506390d-bc0e-8592-39d9-cc8d7a620e77": {
             "paletteKey": "ng-table",
             "parentEditorKey": "ae9719ec-2e5f-3b74-dca4-bbaf9e3ebf00",
@@ -133,6 +200,51 @@
                     "_visibility": true
                 }
             ],
+            "5d20d6d1-1c08-1974-cff8-b662142017a4": {
+                "paletteKey": "ng-table-column",
+                "parentEditorKey": "a506390d-bc0e-8592-39d9-cc8d7a620e77",
+                "isAdvancedChildComponent": true,
+                "designerReference": [
+                    {
+                        "_key": "Header Label",
+                        "_value": "Incident Id",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "matSortHeaderColumn",
+                        "_value": "",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "Mapping",
+                        "_value": "{{table._id}}",
+                        "_type": "ma",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "columnName",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "headerclass",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "columnclass",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    }
+                ]
+            },
             "bef4ffc3-cee9-f28c-9311-403a2c40e1cb": {
                 "paletteKey": "ng-table-column",
                 "parentEditorKey": "a506390d-bc0e-8592-39d9-cc8d7a620e77",
@@ -140,7 +252,7 @@
                 "designerReference": [
                     {
                         "_key": "Header Label",
-                        "_value": "subject",
+                        "_value": "Incident subject",
                         "_type": "a",
                         "_attrDef": "p"
                     },
@@ -185,7 +297,7 @@
                 "designerReference": [
                     {
                         "_key": "Header Label",
-                        "_value": "description",
+                        "_value": "Incident Description",
                         "_type": "a",
                         "_attrDef": "p"
                     },
@@ -230,7 +342,7 @@
                 "designerReference": [
                     {
                         "_key": "Header Label",
-                        "_value": "priority",
+                        "_value": "Incident priority",
                         "_type": "a",
                         "_attrDef": "p"
                     },
@@ -275,7 +387,7 @@
                 "designerReference": [
                     {
                         "_key": "Header Label",
-                        "_value": "checkdate",
+                        "_value": "Incident Date",
                         "_type": "a",
                         "_attrDef": "p"
                     },
@@ -287,7 +399,7 @@
                     },
                     {
                         "_key": "Mapping",
-                        "_value": "{{table.checkdate}}",
+                        "_value": "{{table.date}}",
                         "_type": "ma",
                         "_attrDef": "p",
                         "_useAsLabel": true
@@ -353,6 +465,371 @@
                         "_key": "(page)",
                         "_value": "paginatioin()",
                         "_type": "kv",
+                        "_attrDef": "p"
+                    }
+                ]
+            },
+            "40c8e8f2-a431-0f30-c9e1-d76d84f0fd56": {
+                "paletteKey": "ng-droppable-table-column",
+                "parentEditorKey": "a506390d-bc0e-8592-39d9-cc8d7a620e77",
+                "isAdvancedChildComponent": true,
+                "designerReference": [
+                    {
+                        "_key": "Sort Key",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "matSortHeaderColumn",
+                        "_value": "",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "columnId",
+                        "_value": "c48a8115-3b06-e0f9-4343-35f6a09bc224",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "Header Label",
+                        "_value": "",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "headerclass",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "columnclass",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    }
+                ],
+                "28e0a6f6-a3ad-1532-3b51-0247c0246f9b": {
+                    "paletteKey": "FlexLayoutRow",
+                    "parentEditorKey": "40c8e8f2-a431-0f30-c9e1-d76d84f0fd56",
+                    "designerReference": [
+                        {
+                            "_key": "componentLabel",
+                            "_value": "Row",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_useAsLabel": true
+                        },
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "dav",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "fxFlex",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "fxLayoutGap",
+                            "_value": "20px",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "wrap",
+                            "_value": "wrap",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "layoutAlign",
+                            "_value": "start",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "pLayoutAlign",
+                            "_value": "stretch",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "[fxShow]",
+                            "_value": "true",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "[fxHide]",
+                            "_value": "false",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        }
+                    ],
+                    "a81c3848-107f-b577-770c-683c8b89de7c": {
+                        "paletteKey": "NG-MiniFabButton",
+                        "parentEditorKey": "28e0a6f6-a3ad-1532-3b51-0247c0246f9b",
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "dav",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "fabicon",
+                                "_value": "edit",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "color",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "callupdate(table)",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[disabled]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[disableRipple]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "type",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "routerLink",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            }
+                        ]
+                    },
+                    "7d49a1e4-de91-39e9-6d02-af3c4c896db9": {
+                        "paletteKey": "NG-MiniFabButton",
+                        "parentEditorKey": "28e0a6f6-a3ad-1532-3b51-0247c0246f9b",
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "dav",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "fabicon",
+                                "_value": "delete",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "color",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "calldelete(table._id)",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[disabled]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[disableRipple]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "type",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "routerLink",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            }
+                        ]
+                    },
+                    "16565f8e-2d28-5783-d668-2e1a9f5f01ee": {
+                        "paletteKey": "NG-icon",
+                        "parentEditorKey": "28e0a6f6-a3ad-1532-3b51-0247c0246f9b",
+                        "isCommented": "true",
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "dav",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "IconName",
+                                "_value": "edit",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "[inline]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "color",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "callupdate(table)",
+                                "_type": "kv",
+                                "_attrDef": "c"
+                            }
+                        ]
+                    },
+                    "510df957-44a3-3793-e295-0c48efe0677c": {
+                        "paletteKey": "NG-icon",
+                        "parentEditorKey": "28e0a6f6-a3ad-1532-3b51-0247c0246f9b",
+                        "isCommented": "true",
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "dav",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "IconName",
+                                "_value": "delete",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "[inline]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "color",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "calldelete(table._id)",
+                                "_type": "kv",
+                                "_attrDef": "c"
+                            }
+                        ]
+                    }
+                }
+            },
+            "e82fa1be-5f77-d36d-f2ef-4d8b118716cf": {
+                "paletteKey": "ng-table-filter",
+                "parentEditorKey": "a506390d-bc0e-8592-39d9-cc8d7a620e77",
+                "isAdvancedComponent": true,
+                "advancedSiblingType": "before",
+                "isCommented": "true",
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "(tableFilterFunction)",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "placeholder",
+                        "_value": "Search",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "layoutAlign",
+                        "_value": "end",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "fxFlex",
+                        "_value": "end",
+                        "_type": "a",
                         "_attrDef": "p"
                     }
                 ]

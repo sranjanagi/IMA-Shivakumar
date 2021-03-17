@@ -1,0 +1,33 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <h3>
+      Update Incident</h3>
+  </div>
+  <div fxLayout="row wrap" style="width:300px" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <form [formGroup]="sampleform2">
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Enter Subject" [required]="false" formControlName="subject2">
+          <mat-error align="start" *ngIf="sampleform2.controls.subject2.errors?.required">Please enter the subject</mat-error>
+          <mat-error align="start" *ngIf="sampleform2.controls.subject2.errors?.pattern">Please enter only alphabets.</mat-error>
+        </mat-form-field>
+        <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Enter Description" [required]="false" formControlName="description2">
+          <mat-error align="start" *ngIf="sampleform2.controls.description2.errors?.required">Please enter the description</mat-error>
+          <mat-error align="start" *ngIf="sampleform2.controls.description2.errors?.pattern">Please enter the alphanumeric only.</mat-error>
+        </mat-form-field>
+        <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Enter Priority" [required]="false" formControlName="priority2">
+          <mat-error align="start" *ngIf="sampleform2.controls.priority2.errors?.required">Please enter the Priority</mat-error>
+          <mat-error align="start" *ngIf="sampleform2.controls.priority2.errors?.pattern">Please enter the numeric values.</mat-error>
+        </mat-form-field>
+        <mat-form-field [appearance]="&apos;outline&apos;">
+          <input matInput placeholder="Date Picker" [matDatepicker]="picker" formControlName="date2" (dateChange)="ondatechangecall()" [required]="false" [disabled]="false">
+          <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
+          <mat-datepicker #picker [disabled]="false"></mat-datepicker>
+
+        </mat-form-field>
+      </div><button mat-raised-button style="width:100%;background-color: #6048ce;" routerLink="table" (click)="onclick()">Update</button>
+    </form>
+  </div>
+</div>

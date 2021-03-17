@@ -42,8 +42,8 @@
         "functionName": "addincicent",
         "category": "General",
         "__n_excludedFromValidation__": {},
-        "x": 160,
-        "y": 180,
+        "x": 149.99999809265137,
+        "y": 111,
         "wires": [
             [
                 "sd_acQmaKBtNt5EPeGb"
@@ -58,20 +58,21 @@
         "z": "sd_hRXZgn2ziFfh7xe2",
         "viewType": "common",
         "nodeType": "flow",
-        "name": "",
-        "script": "bh.local.result=bh.input.userdetail; \n",
-        "functionName": "sd_acQmaKBtNt5EPeGb",
+        "name": "scriptnode",
+        "script": "bh.local.result=bh.input.userdetail; \n//bh.input.body=bh.input.userdetail;\nconsole.log(\"in script client\",bh.input.userdetail);",
+        "functionName": "scriptnode",
         "category": "Function",
         "__n_excludedFromValidation__": {},
-        "x": 285,
-        "y": 180,
+        "x": 280.00000381469727,
+        "y": 110.00001907348633,
         "wires": [
             [
-                "sd_7lbRluRM83FQxHCG"
+                "sd_kiljKrUzLHqntozT"
             ]
         ],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "clientservice"
     },
     {
         "id": "sd_7lbRluRM83FQxHCG",
@@ -92,11 +93,12 @@
             }
         },
         "__n_excludedFromValidation__": {},
-        "x": 405,
-        "y": 180,
+        "x": 504.00000381469727,
+        "y": 108.00000381469727,
         "wires": [],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "clientservice"
     },
     {
         "id": "sd_esLYH3gV52d67Ht1",
@@ -106,16 +108,7 @@
         "nodeType": "start",
         "name": "getIncList",
         "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "getalldata",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
+        "inputVariables": [],
         "localVariables": [
             {
                 "key": "result",
@@ -130,8 +123,8 @@
         "functionName": "getIncList",
         "category": "General",
         "__n_excludedFromValidation__": {},
-        "x": 180,
-        "y": 340,
+        "x": 141.00000381469727,
+        "y": 250.99999237060547,
         "wires": [
             [
                 "sd_3aY7BuVa20kwJtXd"
@@ -147,15 +140,15 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.local.result=bh.input.getalldata; ",
+        "script": "console.log(\"in getting data\",bh.local.result);",
         "functionName": "sd_3aY7BuVa20kwJtXd",
         "category": "Function",
         "__n_excludedFromValidation__": {},
-        "x": 265,
-        "y": 320,
+        "x": 265.00000190734863,
+        "y": 251,
         "wires": [
             [
-                "sd_2tk9n4CWAdFEf1wX"
+                "sd_rDGceiajbYilK3UE"
             ]
         ],
         "generateNext": false,
@@ -180,8 +173,371 @@
             }
         },
         "__n_excludedFromValidation__": {},
-        "x": 440,
-        "y": 340,
+        "x": 537.0000095367432,
+        "y": 246.99999237060547,
+        "wires": [],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_kiljKrUzLHqntozT",
+        "type": "CallSSDApi",
+        "z": "sd_hRXZgn2ziFfh7xe2",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlValue": "/addincident",
+        "url": "/addincident",
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "reqBody": "bh.input.userdetail",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "userdetail"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "inputVariables": [],
+        "inputParams": [],
+        "functionName": "sd_kiljKrUzLHqntozT",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 399.99999809265137,
+        "y": 108.8375015258789,
+        "wires": [
+            [
+                "sd_7lbRluRM83FQxHCG"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_rDGceiajbYilK3UE",
+        "type": "CallSSDApi",
+        "z": "sd_hRXZgn2ziFfh7xe2",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "getrequest",
+        "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlValue": "/getincidentdata",
+        "url": "/getincidentdata",
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "reqBody": "",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "inputVariables": [],
+        "inputParams": [],
+        "functionName": "getrequest",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 386.0000057220459,
+        "y": 248.83749389648438,
+        "wires": [
+            [
+                "sd_2tk9n4CWAdFEf1wX"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_nUeZhdh1kkS75REu",
+        "type": "Start",
+        "z": "sd_hRXZgn2ziFfh7xe2",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "deletenode",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "id",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "deletenode",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 138.00000190734863,
+        "y": 379.81249618530273,
+        "wires": [
+            [
+                "sd_C0sA2H65RXCd6QgG"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "clientservice"
+    },
+    {
+        "id": "sd_C0sA2H65RXCd6QgG",
+        "type": "Script",
+        "z": "sd_hRXZgn2ziFfh7xe2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"in delete \",bh.input.id)\nconsole.log(\"in delete \",bh.input.body)\nconsole.log(\"in delete\",bh.input.inside)\nconsole.log(\"in delete\",bh.input.params)\n\n\n",
+        "functionName": "sd_C0sA2H65RXCd6QgG",
+        "category": "Function",
+        "__n_excludedFromValidation__": {},
+        "x": 265.00000381469727,
+        "y": 380.82499504089355,
+        "wires": [
+            [
+                "sd_QMFCL7gycJ6Akgzo"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_QMFCL7gycJ6Akgzo",
+        "type": "CallSSDApi",
+        "z": "sd_hRXZgn2ziFfh7xe2",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlValue": "/deleteincident",
+        "url": "/deleteincident/:id",
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "reqBody": "bh.input.body",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "body"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "inputVariables": [
+            {
+                "key": "id",
+                "valueType": "bh.input",
+                "value": "id"
+            }
+        ],
+        "inputParams": [
+            "bh.input.id"
+        ],
+        "functionName": "sd_QMFCL7gycJ6Akgzo",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 369.0000057220459,
+        "y": 379.8374938964844,
+        "wires": [
+            [
+                "sd_s18xoaYn9TkTIDVu"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_s18xoaYn9TkTIDVu",
+        "type": "Log",
+        "z": "sd_hRXZgn2ziFfh7xe2",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "bh",
+        "functionName": "sd_s18xoaYn9TkTIDVu",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 528.0000076293945,
+        "y": 380.81249618530273,
+        "wires": [],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_8FITAAvIrxbQMw9k",
+        "type": "Start",
+        "z": "sd_hRXZgn2ziFfh7xe2",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "editnode",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "userdetail",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
+                "key": "id",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "editnode",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 136.00000190734863,
+        "y": 499.7999954223633,
+        "wires": [
+            [
+                "sd_t6UZ7a1x4g6KVsUw"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "clientservice"
+    },
+    {
+        "id": "sd_t6UZ7a1x4g6KVsUw",
+        "type": "Script",
+        "z": "sd_hRXZgn2ziFfh7xe2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"in edit \",bh.input.userdetail)\nbh.input.body=bh.input.userdetail;\nconsole.log(\"in edit2 \",bh.input.id)\n\n\n\n\n",
+        "functionName": "sd_t6UZ7a1x4g6KVsUw",
+        "category": "Function",
+        "__n_excludedFromValidation__": {},
+        "x": 237.00000381469727,
+        "y": 498.81249618530273,
+        "wires": [
+            [
+                "sd_khE7hTH0SSYUNPuF"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_khE7hTH0SSYUNPuF",
+        "type": "CallSSDApi",
+        "z": "sd_hRXZgn2ziFfh7xe2",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMappingObj": {},
+        "urlValue": "/updateincident",
+        "url": "/updateincident/:id",
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.body",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "body"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "inputVariables": [
+            {
+                "key": "id",
+                "valueType": "bh.input",
+                "value": "id"
+            }
+        ],
+        "inputParams": [
+            "bh.input.id"
+        ],
+        "functionName": "sd_khE7hTH0SSYUNPuF",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 355.0000057220459,
+        "y": 499.82494735717773,
+        "wires": [
+            [
+                "sd_A7wsCo4TlxrDY3zK"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_A7wsCo4TlxrDY3zK",
+        "type": "Log",
+        "z": "sd_hRXZgn2ziFfh7xe2",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "bh.local.result",
+        "functionName": "sd_A7wsCo4TlxrDY3zK",
+        "category": "General",
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "bh.local",
+                "value": "result",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "x": 523.0000076293945,
+        "y": 504.7999954223633,
         "wires": [],
         "generateNext": false,
         "generated": true

@@ -1,0 +1,14 @@
+{
+    "appPageId": "134dd6bc-71c1-3978-86c9-cc7cc10ed8b8",
+    "appPageName": "shopping",
+    "componentName": "shoppingComponent",
+    "selectorName": "bh-shopping",
+    "htmlFileName": "shopping.template.html",
+    "tsFileName": "shopping.component.ts",
+    "createDate": "2021-03-17T05:40:26.499Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

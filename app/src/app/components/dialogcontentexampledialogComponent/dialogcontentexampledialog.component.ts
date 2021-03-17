@@ -5,6 +5,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { clientservice } from '../../sd-services/clientservice';
+import { datamodelsent } from 'app/models';
 /*
 Client Service import Example:
 import { servicename } from 'app/sd-services/servicename';
@@ -25,6 +26,8 @@ export class dialogcontentexampledialogComponent extends NBaseComponent implemen
     mindate: any;
     output:any;
     changedvalue:any;
+    chan:string;
+    userdata: datamodelsent;
     constructor(public fb: FormBuilder, public dialogRef: MatDialogRef<dialogcontentexampledialogComponent>
         , public client: clientservice) {
         super();
@@ -36,7 +39,7 @@ export class dialogcontentexampledialogComponent extends NBaseComponent implemen
             subject: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
             description: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9 \'\-]+$')]],
             priority: ['', [Validators.required, Validators.pattern('^[0-9 \'\-]+$')]],
-            checkdate: ['', [Validators.required]]
+            date: ['', [Validators.required]]
             //profile: ['', [Validators.required, Validators.minLength(10)]]
         });
     }
@@ -47,6 +50,7 @@ export class dialogcontentexampledialogComponent extends NBaseComponent implemen
             this.dialogRef.close();
         }
         else { }
+
         console.log('logging', this.sampleform.value);
     }
     validateallfields() {
@@ -54,13 +58,20 @@ export class dialogcontentexampledialogComponent extends NBaseComponent implemen
             const control = this.sampleform.get(field);
             control.markAsTouched({ onlySelf: true });
         });
+        this.chan=this.sampleform.controls.date.value.toISOString().slice(0,10);
+        this.userdata={subject:this.sampleform.controls.subject.value,
+        description:this.sampleform.controls.description.value,
+        priority:this.sampleform.controls.priority.value,
+        date:this.chan}
+        // this.userdata.date=this.sampleform.controls.date.value.toString();
+        
 this.callservicemethod(this.sampleform.value);
-
-        this.client.addincicent(this.sampleform.value);
+console.log(this.userdata);
+//        this.client.addincicent(this.userdata);
     }
     async callservicemethod(value:any){
 
-this.changedvalue=(await this.client.addincicent(this.sampleform.value)).local.result;
+this.changedvalue=(await this.client.addincicent(this.userdata)).local.result;
 console.log(this.changedvalue);
     }
     change(event) {

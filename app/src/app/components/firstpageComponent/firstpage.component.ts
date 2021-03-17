@@ -20,6 +20,7 @@ import { HeroService } from '../../services/hero/hero.service';
 })
 
 export class firstpageComponent extends NBaseComponent implements OnInit {
+    insidefirst:boolean=true;
  constructor(public dialog: MatDialog) {
         super();
     }
